@@ -69,7 +69,7 @@ export const getModels = async (options: GetModelsOptions): Promise<ModelRecord>
 			default:
 				// Ensures router is exhaustively checked if RouterName is a strict union
 				const exhaustiveCheck: never = provider
-				throw new Error(`Unknown router: ${exhaustiveCheck}`)
+				throw new Error(`Unknown provider: ${exhaustiveCheck}`)
 		}
 
 		// Cache the fetched models (even if empty, to signify a successful fetch with no models)
