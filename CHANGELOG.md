@@ -1,5 +1,18 @@
 # Roo Code Changelog
 
+## 3.18.0
+
+### Minor Changes
+
+- Adds refresh models button for Unbound provider
+
+### Patch Changes
+
+- New models for the Chutes provider:
+- Shows in the UI when the context is intelligently condensed
+- Fixed bug that prevented some file links from working in the Agent output
+- Fix settings import when global settings are omitted
+
 ## [3.17.2] - 2025-05-15
 
 - Revert "Switch to the new Roo message parser" (appears to cause a tool parsing bug)
