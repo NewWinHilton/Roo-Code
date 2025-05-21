@@ -10,7 +10,8 @@
 		"contextWindow": "コンテキストウィンドウ:",
 		"closeAndStart": "タスクを閉じて新しいタスクを開始",
 		"export": "タスク履歴をエクスポート",
-		"delete": "タスクを削除（Shift + クリックで確認をスキップ）"
+		"delete": "タスクを削除（Shift + クリックで確認をスキップ）",
+		"condenseContext": "タスクコンテキストを圧縮"
 	},
 	"unpin": "ピン留めを解除",
 	"pin": "ピン留め",
@@ -200,15 +201,14 @@
 	},
 	"contextCondense": {
 		"title": "コンテキスト要約",
-		"conversationSummary": "会話の要約",
 		"tokens": "トークン"
 	},
 	"followUpSuggest": {
 		"copyToInput": "入力欄にコピー（またはShift + クリック）"
 	},
 	"announcement": {
-		"title": "🎉 Roo Code 3.17 リリース",
-		"description": "Roo Code 3.17は、あなたのフィードバックに基づく強力な新機能と改善をもたらします。",
+		"title": "🎉 Roo Code {{version}} リリース",
+		"description": "Roo Code {{version}}は、あなたのフィードバックに基づく強力な新機能と改善をもたらします。",
 		"whatsNew": "新機能",
 		"feature1": "<bold>Geminiの暗黙的キャッシング</bold>: Gemini APIコールが自動的にキャッシュされるようになり、APIコストが削減されます",
 		"feature2": "<bold>よりスマートなモード選択</bold>: モード定義に各モードをいつ使用すべきかの指針を含めることができるようになり、より優れた調整が可能になります",

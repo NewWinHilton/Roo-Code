@@ -10,7 +10,8 @@
 		"contextWindow": "上下文長度：",
 		"closeAndStart": "關閉現有工作並開始一項新的工作",
 		"export": "匯出工作紀錄",
-		"delete": "刪除工作（按住 Shift 並點選可跳過確認）"
+		"delete": "刪除工作（按住 Shift 並點選可跳過確認）",
+		"condenseContext": "壓縮工作上下文"
 	},
 	"unpin": "取消置頂",
 	"pin": "置頂",
@@ -200,15 +201,14 @@
 	},
 	"contextCondense": {
 		"title": "上下文已壓縮",
-		"conversationSummary": "對話摘要",
 		"tokens": "tokens"
 	},
 	"followUpSuggest": {
 		"copyToInput": "複製到輸入框（或按住 Shift 並點選）"
 	},
 	"announcement": {
-		"title": "🎉 Roo Code 3.17 已發布",
-		"description": "Roo Code 3.17 帶來基於您意見回饋的強大新功能與改進。",
+		"title": "🎉 Roo Code {{version}} 已發布",
+		"description": "Roo Code {{version}} 帶來基於您意見回饋的強大新功能與改進。",
 		"whatsNew": "新功能",
 		"feature1": "<bold>Gemini 的隱式快取</bold>: Gemini API 呼叫現在自動快取，降低 API 費用",
 		"feature2": "<bold>更智慧的模式選擇</bold>: 模式定義現在可以包含何時應使用各個模式的指引，實現更好的協調",

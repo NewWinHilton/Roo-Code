@@ -10,7 +10,8 @@
 		"contextWindow": "上下文长度：",
 		"closeAndStart": "关闭任务并开始新任务",
 		"export": "导出任务历史",
-		"delete": "删除任务（Shift + 点击跳过确认）"
+		"delete": "删除任务（Shift + 点击跳过确认）",
+		"condenseContext": "压缩任务上下文"
 	},
 	"unpin": "取消置顶",
 	"pin": "置顶",
@@ -200,15 +201,14 @@
 	},
 	"contextCondense": {
 		"title": "上下文已压缩",
-		"conversationSummary": "对话摘要",
 		"tokens": "tokens"
 	},
 	"followUpSuggest": {
 		"copyToInput": "复制到输入框（或按住Shift点击）"
 	},
 	"announcement": {
-		"title": "🎉 Roo Code 3.17 已发布",
-		"description": "Roo Code 3.17 带来基于您反馈的强大新功能和改进。",
+		"title": "🎉 Roo Code {{version}} 已发布",
+		"description": "Roo Code {{version}} 带来基于您反馈的强大新功能和改进。",
 		"whatsNew": "新特性",
 		"feature1": "<bold>Gemini 的隐式缓存</bold>: Gemini API 调用现在会自动缓存，降低 API 费用",
 		"feature2": "<bold>更智能的模式选择</bold>: 模式定义现在可以包含何时使用每种模式的指导，实现更好的协调",

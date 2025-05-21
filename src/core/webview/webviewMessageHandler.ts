@@ -4,11 +4,10 @@ import pWaitFor from "p-wait-for"
 import * as vscode from "vscode"
 
 import { ClineProvider } from "./ClineProvider"
-import { Language, ProviderSettings, GlobalState } from "../../schemas"
+import { Language, ProviderSettings, GlobalState, Package } from "../../schemas"
 import { changeLanguage, t } from "../../i18n"
 import { RouterName, toRouterName, ModelRecord } from "../../shared/api"
 import { supportPrompt } from "../../shared/support-prompt"
-
 import { checkoutDiffPayloadSchema, checkoutRestorePayloadSchema, WebviewMessage } from "../../shared/WebviewMessage"
 import { checkExistKey } from "../../shared/checkExistApiConfig"
 import { experimentDefault } from "../../shared/experiments"
@@ -35,6 +34,7 @@ import { Mode, defaultModeSlug } from "../../shared/modes"
 import { flushModels, getModels } from "../../api/providers/fetchers/modelCache"
 import { GetModelsOptions } from "../../shared/api"
 import { generateSystemPrompt } from "./generateSystemPrompt"
+import { getCommand } from "../../utils/commands"
 
 const ALLOWED_VSCODE_SETTINGS = new Set(["terminal.integrated.inheritEnv"])
 
@@ -197,6 +197,9 @@ export const webviewMessageHandler = async (provider: ClineProvider, message: We
 			break
 		case "showTaskWithId":
 			provider.showTaskWithId(message.text!)
+			break
+		case "condenseTaskContextRequest":
+			provider.condenseTaskContext(message.text!)
 			break
 		case "deleteTaskWithId":
 			provider.deleteTaskWithId(message.text!)
@@ -462,7 +465,7 @@ export const webviewMessageHandler = async (provider: ClineProvider, message: We
 
 			// Also update workspace settings.
 			await vscode.workspace
-				.getConfiguration("roo-cline")
+				.getConfiguration(Package.name)
 				.update("allowedCommands", message.commands, vscode.ConfigurationTarget.Global)
 
 			break
@@ -1316,7 +1319,7 @@ export const webviewMessageHandler = async (provider: ClineProvider, message: We
 			break
 		case "humanRelayResponse":
 			if (message.requestId && message.text) {
-				vscode.commands.executeCommand("roo-cline.handleHumanRelayResponse", {
+				vscode.commands.executeCommand(getCommand("handleHumanRelayResponse"), {
 					requestId: message.requestId,
 					text: message.text,
 					cancelled: false,
@@ -1326,7 +1329,7 @@ export const webviewMessageHandler = async (provider: ClineProvider, message: We
 
 		case "humanRelayCancel":
 			if (message.requestId) {
-				vscode.commands.executeCommand("roo-cline.handleHumanRelayResponse", {
+				vscode.commands.executeCommand(getCommand("handleHumanRelayResponse"), {
 					requestId: message.requestId,
 					cancelled: true,
 				})

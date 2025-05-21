@@ -10,7 +10,8 @@
 		"contextWindow": "Durée du contexte :",
 		"closeAndStart": "Fermer la tâche et en commencer une nouvelle",
 		"export": "Exporter l'historique des tâches",
-		"delete": "Supprimer la tâche (Shift + Clic pour ignorer la confirmation)"
+		"delete": "Supprimer la tâche (Shift + Clic pour ignorer la confirmation)",
+		"condenseContext": "Condenser le contexte de la tâche"
 	},
 	"unpin": "Désépingler",
 	"pin": "Épingler",
@@ -200,15 +201,14 @@
 	},
 	"contextCondense": {
 		"title": "Contexte condensé",
-		"conversationSummary": "Résumé de la conversation",
 		"tokens": "tokens"
 	},
 	"followUpSuggest": {
 		"copyToInput": "Copier vers l'entrée (ou Shift + clic)"
 	},
 	"announcement": {
-		"title": "🎉 Roo Code 3.17 est sortie",
-		"description": "Roo Code 3.17 apporte de puissantes nouvelles fonctionnalités et améliorations basées sur vos retours.",
+		"title": "🎉 Roo Code {{version}} est sortie",
+		"description": "Roo Code {{version}} apporte de puissantes nouvelles fonctionnalités et améliorations basées sur vos retours.",
 		"whatsNew": "Quoi de neuf",
 		"feature1": "<bold>Mise en cache implicite pour Gemini</bold> : Les appels à l'API Gemini sont désormais automatiquement mis en cache, réduisant les coûts d'API",
 		"feature2": "<bold>Sélection de mode plus intelligente</bold> : Les définitions de mode peuvent maintenant inclure des indications sur quand chaque mode doit être utilisé, permettant une meilleure orchestration",

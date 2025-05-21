@@ -69,6 +69,7 @@ export interface ExtensionMessage {
 		| "setHistoryPreviewCollapsed"
 		| "commandExecutionStatus"
 		| "vsCodeSetting"
+		| "condenseTaskContextResponse"
 		| "providerModelsResponse"
 	text?: string
 	action?:
